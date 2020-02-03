@@ -1,1 +1,74 @@
-<p>graficas1 works!</p>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <!--Este es el espacio en donde quiero poner la grafica, por lo tanto el codigo de
+        la documentacion de ng2-chart de la grafica lo pego acá-->
+        <div>
+          <div>
+<!--            <div style="display: block">
+              <canvas baseChart
+                      [data]="doughnutChartData"
+                      [labels]="doughnutChartLabels"
+                      [chartType]="doughnutChartType">
+              </canvas>
+            </div>-->
+            <h4 class="card-title">{{graficos.grafico1.leyenda}}</h4>
+            <app-grafico-dona
+            [doughnutChartLabels]="graficos.grafico1.labels" [doughnutChartData]="graficos.grafico1.data" doughnutChartType="doughnut"
+            ></app-grafico-dona>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Grafico 2-->
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{graficos.grafico2.leyenda}}</h4>
+            <app-grafico-dona [doughnutChartLabels]="graficos.grafico2.labels" [doughnutChartData]="graficos.grafico2.data" doughnutChartType="doughnut"> </app-grafico-dona>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <!--Grafica 3-->
+        <div>
+          <div>
+            <h4 class="card-title">{{graficos.grafico3.leyenda}}</h4>
+            <app-grafico-dona [doughnutChartLabels]="graficos.grafico3.labels" [doughnutChartData]="graficos.grafico3.data" doughnutChartType="doughnut" ></app-grafico-dona>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Grafico 4-->
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{graficos.grafico4.leyenda}}</h4>
+            <app-grafico-dona [doughnutChartLabels]="graficos.grafico4.labels" [doughnutChartData]="graficos.grafico4.data" doughnutChartType="doughnut" ></app-grafico-dona>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
