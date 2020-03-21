@@ -18,6 +18,12 @@ import {AccountSettingsComponent} from './account-settings/account-settings.comp
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+/*Pipe Module*/
+import {PipesModule} from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import {CommonModule} from '@angular/common';
+
+
 @NgModule({
   declarations: [
     PagesComponent,
@@ -28,20 +34,24 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     GraficoDonaComponent,
     AccountSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   exports: [
     PagesComponent,
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    PipesModule
   ],
-  imports: [
-    SharedModule,
-    PAGES_ROUTES,
-    FormsModule,
-    ChartsModule
-  ]
+    imports: [
+        SharedModule,
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule,
+        CommonModule,
+      PipesModule
+    ]
 })
 
 export class PageModule {

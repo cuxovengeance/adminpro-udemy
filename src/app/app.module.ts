@@ -14,11 +14,12 @@ import { RegisterComponent } from './login/register.component';
 
 import {RouterModule} from '@angular/router';
 import { IncrementadorComponent } from './components/incrementador/incrementador.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 /*SERVICIOS*/
 /*import {SettingsService} from './services/service.index';*/
-import {ServiceModule} from './services/service.module';  // Debo colocarlo en los imports tambien
+import {ServiceModule} from './services/service.module';
+ // Debo colocarlo en los imports tambien
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {ServiceModule} from './services/service.module';  // Debo colocarlo en l
     APP_ROUTES,
     PageModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceModule
   ],
   providers: [],
