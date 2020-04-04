@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
   recuerdame: boolean = false;
   auth2: any;
 
-  attach;
-
   ngOnInit() {
     init_plugins();
     this.googleInit();
@@ -63,7 +61,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    const usuario = new Usuario(null, forma.value.email, forma.value.password );
+    let usuario = new Usuario(null, forma.value.email, forma.value.password );
 
     this._usuarioService.login(usuario, forma.value.recuerdame)
       .subscribe(correcto => this.router.navigate(['/dashboard']));

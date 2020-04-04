@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
 
   imagenTemp: string | ArrayBuffer;
 
+  // tslint:disable-next-line:variable-name
   constructor(public _usuarioService: UsuarioService) {
     this.usuario = this._usuarioService.usuario;
   }

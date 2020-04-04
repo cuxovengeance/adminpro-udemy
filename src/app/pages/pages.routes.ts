@@ -8,6 +8,7 @@ import {PromesasComponent} from './promesas/promesas.component';
 import {RxjsComponent} from './rxjs/rxjs.component';
 import {LoginGuardGuard} from '../services/service.index';
 import {ProfileComponent} from './profile/profile.component';
+import {UsuariosComponent} from './usuarios/usuarios.component';
 
 
 const PagesRoutes: Routes = [
@@ -16,13 +17,16 @@ const PagesRoutes: Routes = [
     component: PagesComponent,
     canActivate: [LoginGuardGuard],
     children: [
-      {path: 'profile', component: ProfileComponent, data: {titulo: 'Profile'}},
       {path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboard'}},
       {path: 'progress', component: ProgressComponent, data: {titulo: 'Progress'}},
       {path: 'graficas1', component: Graficas1Component, data: {titulo: 'Gráficos'}},
       {path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'}},
       {path: 'rxjs', component: RxjsComponent, data: {titulo: 'RxJs'}},
       {path: 'account-settings' , component: AccountSettingsComponent, data: {titulo: 'Ajustes del Tema'}},
+      {path: 'profile', component: ProfileComponent, data: {titulo: 'Profile'}},
+
+      /*Mantenimiento*/
+      {path: 'usuarios', component: UsuariosComponent, data: {titulo: 'Mantenimiento de Usuarios'}},
       {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
   }
